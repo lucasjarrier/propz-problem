@@ -24,7 +24,7 @@ public class ProblemService {
                 }
             }
             boolean isPerfect = sum == number;
-            String message = isPerfect ? "O número " + number + " é perfeito." : "O número " + number + " não é perfeito.";
+            String message = isPerfect ? "O número " + number + " é perfeito!" : "O número " + number + " não é perfeito!";
             return new ResponseFormat<>(200, message, "Sucesso.");
         } catch (Exception e) {
             return new ResponseFormat<>(500, null, e.getMessage());
@@ -36,11 +36,11 @@ public class ProblemService {
             validators.validateInterval(start, end);
             List<Integer> perfectNumbers = new ArrayList<>();
             for (int number = start; number <= end; number++) {
-                if (isPerfectNumber(number).getData().equals("O número " + number + " é perfeito.")) {
+                if (isPerfectNumber(number).getData().equals("O número " + number + " é perfeito!")) {
                     perfectNumbers.add(number);
                 }
             }
-            String message = perfectNumbers.isEmpty() ? "Nenhum número perfeito encontrado no intervalo fornecido." : "Números perfeitos encontrados no intervalo fornecido.";
+            String message = perfectNumbers.isEmpty() ? "Nenhum número perfeito encontrado no intervalo fornecido!" : "Números perfeitos encontrados no intervalo fornecido!";
             return new ResponseFormat<>(200, perfectNumbers, message);
         } catch (Exception e) {
             return new ResponseFormat<>(500, null, e.getMessage());

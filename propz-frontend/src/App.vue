@@ -78,7 +78,7 @@ export default {
           this.result1 = response.data.message;
         }
       } catch (error) {
-        this.result1 = 'Error' + error;
+        this.result1 = 'Error';
       }
     },
     async findPerfectNumbers() {
@@ -90,7 +90,7 @@ export default {
           this.result2 = response.data.message;
         }
       } catch (error) {
-        this.result2 = 'Error' + error;
+        this.result2 = 'Error';
       }
     }
   }
